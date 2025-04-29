@@ -1,0 +1,42 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "lovable_parser"
+version = "0.1.0"
+description = "A parser for converting HTML chat conversations to markdown format"
+authors = []
+readme = "README.md"
+license = "MIT"
+packages = [{ include = "lovable_parser", from = "src" }]
+repository = "https://github.com/lovable-exp/lovable_parser"
+keywords = ["html", "markdown", "parser", "chat", "converter"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Text Processing :: Markup :: HTML",
+    "Topic :: Text Processing :: Markup :: Markdown"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+beautifulsoup4 = ">=4.12.0"
+markdownify = ">=0.11.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = ">=7.0.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test"]
+python_functions = ["test_*"]
+pythonpath = ["src"]
+addopts = ["--import-mode=importlib"]
