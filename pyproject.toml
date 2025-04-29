@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "lovable_parser"
-version = "0.3.0"
+version = "0.4.0"
 description = "A parser for converting HTML chat conversations to markdown format"
 authors = []
 readme = "README.md"
